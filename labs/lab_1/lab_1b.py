@@ -38,6 +38,13 @@ def simple_calculator(operation: str, num1: float, num2: float) -> float:
                 print("cannot divide by zero.")
         else:
             print("Invalid operation. Try again.")
+            
+def get_number(prompt):
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print("Invalid input. Please enter a number.")
 
 def main():
     
