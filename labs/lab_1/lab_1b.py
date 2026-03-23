@@ -22,20 +22,22 @@ def simple_calculator(operation: str, num1: float, num2: float) -> float:
     Returns:
         float: The result of the operation.
     """
+    while True:
+        operation = input("Enter operation (add, subtract, multiply, divide): ")
 
-    if operation == "add":
-        return num1 + num2
-    elif operation == "subtract":
-        return num1 - num2
-    elif operation == "multiply":
-        return num1 * num2
-    elif operation == "divide":
-        if num2 != 0:
-            return num1 / num2
+        if operation == "add":
+            return num1+num2
+        elif operation == "subtract":
+            return num1-num2
+        elif operation == "multiply":
+            return num1 * num2
+        elif operation == "divide":
+            if num2 != 0:
+                return num1 / num2
+            else:
+                print("cannot divide by zero.")
         else:
-            raise ValueError("Cannot divide by zero.")
-    else:
-        raise ValueError("Invalid operation. Please choose from 'add', 'subtract', 'multiply', or 'divide'.")
+            print("Invalid operation. Try again.")
 
 def main():
     
